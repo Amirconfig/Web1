@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Amir Hosein Khanmohammadi</title>
+
+    <!--
+Author:       Amir Hosein Khanmohammadi
+Student ID:   991646689
+Program:      index.html
+Date:         December 1, 2022
+Updated:      December 4, 2022 
+Version:      1.0
+Description:  This page contains 3 sections (Header, Content, Footer)
+ inside Content there are 5 sections (Submit/Reset section, Personal 
+ info section, Comment section, Course section, Error Message section) 
+ which get information from the user, and when the user clicks on the 
+ send submit button, it evaluates the information taken from the user 
+ whether it is entered as requested format or not and displays the 
+ message at the end.
+-->
+
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+
+<body>
+    <form name="myForm" onsubmit='return checkAll();'>
+    <div style='position:static;'></div>
+        <div class='grid'>
+            <header class='header'><h3>"Assignment #4"  /  Amir Hosein Khanmohammadi</h3></header>
+            <div class='c1'>
+
+                <div class='grid-container'>
+
+                    <section class='box a'>
+                        <div class='grid-container2'>
+                            <div class='box1 z'>
+                                <P><button onclick='checkAll()' type="submit">Submit</button></P>
+                            </div>
+                            <div class='box1 x'>
+                                <P><button type="reset">Reset</button></P>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class='box b'>
+                            <div class="input-container">
+                                <p><label for="firstName">First Name*</label>
+                                <input class="text-input" type="text" id="id1" name="First Name" autocomplete="off" placeholder="Amir" required></p>
+                            </div>
+                            <br>
+                            <div class="input-container">
+                                <p><label for="lastName">Last Name*</label>
+                                <input class="text-input" type="text" id="id2" name="Last Name" autocomplete="off" placeholder="Khanmohammadi" required></p>
+                            </div>
+                            <br>
+                            <div class="input-container">
+                                <p><label for="studentNumber">Student Number*</label>
+                                <input class="text-input" type="text" id="id3" name="Student Number" autocomplete="off" placeholder="991646689" minlength="9" maxlength="9" pattern="[0-9]{9}" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" required></p>
+                            </div>
+                            <br>
+                            <div class="input-container">
+                                <p><label for="email">Email</label>
+                                <input class="text-input" type="email" id="id4" name="Email" autocomplete="off" placeholder="Khanmoam@sheridancollege.ca"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></p>
+                                <p style="font-size: 12px">characters@characters.domain (characters followed by an @ sign, followed by more characters, and then a ".". After the "." sign, add at least 2 letters from a to z.</p>
+                            </div>
+                            <br>
+                            <div class="input-container">
+                            <p><label for="campus">Select your campus</label>
+                            <select class="text-input" name="Campus" id="id5">
+                                <option value="Trafalgar">Trafalgar</option>
+                                <option value="Davis">Davis</option>
+                                <option value="Mississauga">Mississauga</option>
+                            </select></p>
+                            </div>
+                    </section>
+
+                    <section class='box c'>
+                        <div class="input-container">
+                            <h3><label for="comment">Comments</label></h3>
+                          <br>
+                            <p><textarea class="comment" name="comment" id="id6" rows="5" placeholder="Type Your comment..."></textarea></p>
+                        </div>
+                    </section>
+
+                    <section class='box d'>
+                        <div class="grid-container1">
+                            <div class='boxx aa'>
+                                    <div>
+                                        <p><label for="course1">Course #1 Name</label>
+                                        <input class="course-input" type="text" id="id7" name="Course #1" placeholder="PROG10082" minlength='9' maxlength='9' required></p>
+                                    </div>
+                            </div>
+                            <div class='boxx bb'>
+                                <p><label for="grade1">Marks #1 (0-100)</label><br>
+                                <input class="marks-input" type="number" id="id8" name="Marks #1" placeholder="e.g. 100"
+                                min="0" max="100" required></p>
+                            </div>
+                            <div class='boxx cc'>
+                                    <div>
+                                        <p><label for="course2">Course #2 Name</label>
+                                        <input class="course-input" type="text" id="id9" name="Course #2" placeholder="SYST10049" minlength='9' maxlength='9' required></p>
+                                    </div>
+                            </div>
+                            <div class='boxx dd'>
+                                <p><label for="grade2">Marks #2 (0-100)</label><br>
+                                <input class="marks-input" type="number" id="id10" name="Marks #2" placeholder="e.g. 90"
+                                min="0" max="100" required></p>
+                            </div>
+                            <div class='boxx ee'>
+                                    <div>
+                                        <P><label for="course3">Course #3 Name</label>
+                                        <input class="course-input" type="text" id="id11" name="Course #3" placeholder="TELE13167" minlength='9' maxlength='9' required></P>
+                                    </div>
+                            </div>
+                            <div class='boxx ff'>
+                                <P><label for="grade3">Marks #3 (0-100)</label><br>
+                                <input class="marks-input" type="number" id="id12" name="Marks #3" placeholder="e.g. 80"
+                                min="0" max="100" required></P>
+                            </div>
+                            <div class='boxx gg'>
+                                    <div>
+                                        <p><label for="course4">Course #4 Name</label>
+                                        <input class="course-input" type="text" id="id13" name="Course #4" placeholder="MATH18584" minlength='9' maxlength='9' required></p>
+                                    </div>
+                            </div>
+                            <div class='boxx hh'>
+                                <p><label for="grade4">Marks #4 (0-100)</label><br>
+                                <input class="marks-input" type="number" id="id14" name="Marks #4" placeholder="e.g. 100"
+                                min="0" max="100" required></p>
+                            </div>
+                            <div class='boxx ii'>
+                                    <div>
+                                        <p><label for="course5">Course #5 Name</label>
+                                        <input class="course-input" type="text" id="id15" name="Course #5" placeholder="COMM13729" minlength='9' maxlength='9' required></p>
+                                    </div>
+                            </div>
+                            <div class='boxx jj'>
+                                <p><label for="grade5">Marks #5 (0-100)</label><br>
+                                <input class="marks-input" type="number" id="id16" name="Marks #5" placeholder="e.g. 100"
+                                min="0" max="100" required></p>
+                            </div>
+                            <div class='boxx kk'>
+                                    <div>
+                                        <p><label for="course6">Course #6 Name</label>
+                                        <input class="course-input" type="text" id="id17" name="Course #6" placeholder="CULT14579G"></p>
+                                        <h4>Note:</h4><p style="font-size: 12px; text-align: justify;">This blank is not Required, Only if you have an Elective Course, fill it in.<br>
+                                            No Length Limit, because the name of this code is different from the others.</p>
+                                    </div>
+                            </div>
+                            <div class='boxx ll'>
+                                <p><label for="grade6">Marks #6 (0-100)</label><br>
+                                <input class="marks-input" type="number" id="id18" name="Marks #6" placeholder="e.g. 89"
+                                min="0" max="100"></p>
+                            </div>
+                        </div>
+                    </section>
+                    </form>
+                    <section class='box e'>
+                        <span class='Validation'><b>Validation Message:</b></span>
+                    	<p id='output' class="Validation"></p>
+                    </section>
+                </div>
+                
+            </div>
+            <footer class='footer'>
+                <p>khanmoam / Khanmoam@sheridancollege.ca / Trafalgar</p>
+
+            </footer>
+       </div>
+       
+       <script>
+	
+        function checkAll() {
+            var good=0;									
+            console.clear();									
+            document.getElementById('output').innerHTML='';		
+            totInput = document.getElementsByTagName('input').length;
+    
+            for (var x=1; x<=totInput; x++) {
+                var inpObj = document.getElementById('id'+x);
+
+                if (!inpObj.checkValidity()) {					
+                    
+                    document.getElementById('output').innerHTML+='<span class="red">Input '+inpObj.getAttribute("name")+' - '+inpObj.validationMessage+'</span><br>';
+
+                } else {										
+                    good+=1;									
+                    document.getElementById('output').innerHTML+= '<span class="green">Input '+inpObj.getAttribute("name")+' - Input OK</span><br>';
+                }
+    
+                if (good===totInput) {							
+                    document.getElementById('output').innerHTML= 'Inputs all good!!!';
+                    console.clear();							
+                }	
+            }
+    
+            return false;										
+        }
+    
+        </script>
+</body>
+</html>
